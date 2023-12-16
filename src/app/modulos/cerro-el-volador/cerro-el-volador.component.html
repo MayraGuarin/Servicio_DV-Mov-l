@@ -1,0 +1,193 @@
+<div class="container-fluid">
+  <h1 class="text-center fw-bold texto-museo">CERRO EL VOLADOR</h1>
+
+<!---->
+<!--DAR ME GUSTO O NO ME GUSTA-->
+<div class="container-fluid">
+  <div class="manos">
+    <button class="boton_purgar" (click)="incrementLikes()">
+        <i class="fas fa-thumbs-up pulgar_arriba"></i> {{likesCount}}
+    </button>
+    <button class="boton_purgar" (click)="incrementDisLikes()">
+        <i class=" fas fa-thumbs-down pulgar_abajo"></i>  {{dislikesCount}}
+    </button>
+  </div>
+
+<hr>
+<!--PARRAFOS-->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content ">
+
+      <p class="info-general-1">El Parque Natural Regional Cerro el Volador, cuenta con elementos naturales de importancia ecosistémica para la ciudad, dispone de variados espacios que acogen diferentes actividades culturales y turísticas, entre los que se destacan: el museo arqueológico, el sendero del indio, la espiral del tiempo, el castillo, el mariposario a cielo abierto y la cima.</p>
+
+
+        <p class="info-general-2" id="parrafo-2"> Este parque posee una gran riqueza en cuanto a avifauna. Al visitarlo se pueden avistar diferentes especies, tanto endémicas como migratorias.</p>
+
+
+        <p class="info-3">Visita este parque natural para que conozcas la riqueza arqueológica de nuestra región; inmersa en zonas con diversos tipos de bosque.  Cuenta, además, con una gran circunvalar en la que podrás hacer ejercicio y disfrutar de una vista de 360° de la ciudad de Medellín.</p>
+    </div>
+  </div>
+</div>
+    <!--HACER COMENTARIOS-->
+
+<div class="content comentarios-total">
+  <h4 class="fw-bold">Comentarios</h4>
+  <ul>
+    <li *ngFor="let comentario of comentarios">{{comentario}}</li>
+  </ul>
+    <textarea class="cuadro-comentarios" [(ngModel)]="nuevoComentario" placeholder="Ingresa un comentario">
+    </textarea>
+
+<div class="botoncoment">
+  <button (click)="agregarComentario()" class="boton-comentarios">Enviar</button>
+</div>
+</div>
+
+<!--DAR CLICK EN UNA DE LOS OPCIONES-->
+  <div class="contenedor mt-4">
+    <div class="row opcion-principal">
+      <div class=" opciones text-center fw-bold ">
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion1')" [checked]="opcionSeleccionada === 'opcion1'"> Ver Mapa
+        </label>
+
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion2')" [checked]="opcionSeleccionada === 'opcion2'"> Restaurantes cercanos
+        </label>
+
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion3')" [checked]="opcionSeleccionada === 'opcion3'"> Hoteles cercanos
+        </label>
+
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion4')" [checked]="opcionSeleccionada === 'opcion4'"> Imagenes
+        </label>
+      </div>
+
+    <!--OPCION 1 MAPA-->
+      <div class="principal text-cente">
+        <div *ngIf="opcionSeleccionada === 'opcion1'" class="info ">
+  <!-- Contenido para agregar la ruta del Mapa-->
+          <div class="mapa ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15863.842467354514!2d-75.59196647129612!3d6.268910029061906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442918983733fd%3A0x2e5c368c9a659611!2sCerro%20El%20Volador!5e0!3m2!1ses-419!2sco!4v1700654618554!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+<!--OPCION 2 RESTAURANTES-->
+        <div *ngIf="opcionSeleccionada === 'opcion2'" class="info">
+  <!-- Contenido para la Opción 2 -->
+          <div class="container">
+            <div class="row ">
+             <div class="contenedor restaurante-1 mt-4">
+              <img src="./assets/imagenes/fotos_restaurantes/resta-4.jpg" width="110px" alt="">
+                <div class="nombre-restaurante">
+                  <h6 class="fw-bold" style="color: royalblue;">San German</h6>
+                    <p class="direccion small">Carrera 74C con la 65</p>
+                    <p class="tipo-comida small">Comida Nacional </p>
+                </div>
+              </div>
+
+              <div class="contenedor restaurante-1 mt-4">
+                <img src="./assets/imagenes/fotos hoteles/hotel-5.jpg" width="110px" alt="">
+                  <div class="nombre-restaurante">
+                    <h6 class="fw-bold" style="color: royalblue;">Mr. Tamal</h6>
+                      <p class="direccion small">Carrera 81 #51B-43</p>
+                      <p  class="tipo-comida small">Restaurante Colombiano</p>
+                  </div>
+                 </div>
+
+                <div class="contenedor restaurante-1 mt-4">
+                  <img src="./assets/imagenes/fotos hoteles/hotel-6.jpg" width="110px" alt="">
+                   <div class="nombre-restaurante">
+                      <h6 class="fw-bold" style="color: royalblue;">Lo Exquisito del Mar</h6>
+                        <p class="direccion small">Carrera 49B #68-56</p>
+                        <p class="tipo-comida small">Restaurante Caribeño</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+<!--OPCION 3 HOTELES-->
+        <div *ngIf="opcionSeleccionada === 'opcion3'" class="info ">
+  <!-- Contenido para la Opción 3 -->
+          <div class="container">
+            <div class="row ">
+              <div class="contenedor restaurante-1 mt-4">
+                <img src="./assets/imagenes/fotos hoteles/hotel-4.jpg" width="110px" alt="">
+                  <div class="nombre-restaurante">
+                    <h6 class="fw-bold" style="color: royalblue;">Terra BioHotel</h6>
+                      <p class="direccion small">Calle 35 # 64A-92</p>
+                  </div>
+              </div>
+
+      <div class="contenedor restaurante-1 mt-4">
+        <img src="./assets/imagenes/fotos hoteles/hotel-5.jpg" width="110px" alt="">
+          <div class="nombre-restaurante">
+            <h6 class="fw-bold" style="color: royalblue;">Hotel Portón de San Joaquín</h6>
+              <p class="direccion small">Calle 42  # 68A-32</p>
+        </div>
+       </div>
+
+        <div class="contenedor restaurante-1 mt-4">
+          <img src="./assets/imagenes/fotos hoteles/hotel-6.jpg" width="110px" alt="">
+            <div class="nombre-restaurante">
+              <h6 class="fw-bold" style="color: royalblue;">Hotel Lincoln</h6>
+                <p class="direccion small">Circular 73A # 70-28</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--OPCION 4 IMAGENES GENERALES DEL LUGAR-->
+        <div *ngIf="opcionSeleccionada === 'opcion4'" class="info fw-bold">
+  <!-- Contenido para galeria de imagenes-->
+          <div class=" container photo-gallery">
+            <div class="row">
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-1.jpg" class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-2.jpg" class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-3.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-4.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+             <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-5.jpg" class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-6.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-7.jpg" class="img-thumbnail" alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-8.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-el-volador/cerro-el-volador-9.jpg"class="img-thumbnail"  alt="">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+

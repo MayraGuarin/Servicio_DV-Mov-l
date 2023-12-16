@@ -1,0 +1,21 @@
+.botones{
+display: flex;
+gap: 30px;
+justify-content: center;
+cursor: pointer;
+}
+.botones a{
+  font-size: 30px;
+}
+.botones a:hover{
+  transform: scale(1.2);
+}
+.enviar{
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.enviar:active{
+transform: scale(0.96);
+}
+

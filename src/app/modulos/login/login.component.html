@@ -1,0 +1,35 @@
+<main>
+
+  <div class="contenedor__todo">
+    <div class="caja__trasera">
+      <div class="caja__trasera-register">
+        <h2 class="fw-bold text-center">Bienvenido</h2>
+        <h3 class="fw-bold">¿Aún no tienes una cuenta?</h3>
+        <p>Regístrate para que puedas iniciar sesión</p>
+        <a  [routerLink]="['/registrar']"><button  id="btn__registrarse" class="vertical-layout" >Registrarse</button></a>
+      </div>
+    </div>
+
+
+
+    <div class="contenedor__login-register">
+      <form action="" class="formulario__login" >
+        <div class="imagencentral text-center fw-bold">
+           <img src="./assets/imagenes/logo sin letra.PNG" class="text-center" alt="descubre_tu_viaje" width="35px">
+           <span class="text-center">Descubre tu viaje</span>
+        </div>
+        <h2>Iniciar Sesión</h2>
+        <input type="text" placeholder="Correo electrónico" [(ngModel)]="email" name="email">
+        <input type="password" placeholder="Contraseña" [(ngModel)]="clave" name="clave">
+        <span *ngIf="error==true" style="color: red;">Correo o contraseña incorrecta</span><br>
+        <button (click)="consulta()" >Entrar</button>
+      </form>
+
+
+
+
+    </div>
+  </div>
+</main>
+
+

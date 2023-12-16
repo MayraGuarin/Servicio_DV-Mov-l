@@ -1,0 +1,224 @@
+
+
+<!-- FINALIZA LUGARES DESTACADOS-->
+
+<div class="container  justify-content-center seleccionar">
+  <h1 class="fw-bold">SITIOS TURÍSTICOS</h1>
+<div class="row text-center ">
+
+<p class="sitios">En esta Sección podras ver todos los sitios turisticos segun la ciudad</p>
+
+<h6>Seleccione la ciudad</h6>
+    <div class="d-flex align-items-center justify-content-center">
+      <select class="form-select d-flex align-items-center justify-content-center" [(ngModel)]="ciudadSeleccionada" aria-label="Default select example">
+        <option selected disabled>Seleccione</option>
+        <option value="Bogotá">Bogotá</option>
+        <option value="Medellín">Medellín</option>
+      </select>
+    </div>
+
+
+<!--MEDELLIN-->
+
+     <!--MEDELLIN-->
+
+     <div class="container text-center ">
+      <h1 class=" ciudad text-center">{{ ciudadSeleccionada }}</h1>
+      <div class="row  justify-content-center" *ngIf="ciudadSeleccionada==='Medellín'">
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/MuseoAntioquia.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Museo de Antioquia</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" [routerLink]="['/museo-antioquia']">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/botero-in-berlin-250915_1280.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Parque Botero</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/museoelcastillo.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Museo el Castillo</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/pueblito paisa.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Pueblito Paisa</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/cerroelvolador.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Cerro el Volador</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" [routerLink]="['/cerro-el-volador']">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/parque explora.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Parque Explora</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/pies descalsos.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">P. Pies descansos</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/parquearvi.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Parque Arví</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!--BOGOTA-->
+
+    <div class="container">
+      <div class="row justify-content-center"*ngIf="ciudadSeleccionada==='Bogotá'">
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/plazabolivar.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Plaza Bolivar</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/museo el oro.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Museo el Oro</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/jardinbotanicobogota.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Jardín Botánico</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/museonacional.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Museo Nacional</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="/assets/imagenes/basilicametropolitana.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Basilica Met.</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/monserrate.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Monserrate</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/santaclara.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Santa Clara</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" style="width: 14rem;">
+          <img src="./assets/imagenes/plazachorro.JPG" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h6 class="card-title text-center">Plaza Chorro</h6>
+            <div class="text-center justify-content-center">
+              <button class="button-33 text-center" role="button"><a class="text-decoration-none text-black text-center" href="#">Ver</a>
+              </button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+

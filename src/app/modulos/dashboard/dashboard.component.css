@@ -1,0 +1,68 @@
+/**/
+
+/*IMAGENES MAS DESTACADAS*/
+.container{
+  z-index: 1; /*EL NAV TIENE Z-INDEX 2 PARA QUE LAS IMANGENES NO QUEDEN ENCIMA DEL SIDEBAR, (NO MIDOFICALLO)*/
+}
+.card{
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+}
+.card-img-top{
+  display: flex;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 15px;
+}
+.card{
+  padding: 10px;
+   margin-right: 10px;
+}
+
+/* CSS  del boton vVER en lugares destacados*/
+.button-33 {
+  background-color: #26ccea;
+  border-radius: 100px;
+  box-shadow: rgba(95, 175, 206, 0.2) 0 -25px 18px -14px inset,rgba(44, 158, 187, 0.2) 0 1px 2px,rgba(44, 187, 180, 0.2) 0 2px 4px,rgba(44, 165, 187, 0.2) 0 4px 8px,rgba(44, 177, 187, 0.2) 0 8px 16px,rgba(44, 165, 187, 0.2)0 16px 32px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: center;
+}
+
+.button-33:hover {
+  box-shadow: black 0 -25px 18px -14px inset, black 0 1px 2px black 0 2px 4px, black 0 4px 8px,
+  black 0 8px 16px, black 0 16px 32px;
+  background-color: transparent;
+  color: #26ccea;
+  transform: scale(1.05) rotate(-1deg);
+}
+/*SELECCIONAR CIUDAD*/
+
+.seleccionar{
+  display: flex;
+  margin-top: 20px;
+}
+.form-select{
+  width: 260px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+
+
+

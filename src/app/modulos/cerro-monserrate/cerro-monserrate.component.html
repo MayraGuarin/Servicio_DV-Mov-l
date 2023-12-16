@@ -1,0 +1,187 @@
+<div class="container-fluid">
+  <h1 class="text-center fw-bold texto-museo">CERRO MONSERRATE</h1>
+
+<!---->
+<!--DAR ME GUSTO O NO ME GUSTA-->
+<div class="container-fluid">
+  <div class="manos">
+    <button class="boton_purgar" (click)="incrementLikes()">
+        <i class="fas fa-thumbs-up pulgar_arriba"></i> {{likesCount}}
+    </button>
+    <button class="boton_purgar" (click)="incrementDisLikes()">
+        <i class=" fas fa-thumbs-down pulgar_abajo"></i>  {{dislikesCount}}
+    </button>
+  </div>
+
+<hr>
+<!--PARRAFOS-->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content ">
+
+      <p class="info-general-1">El Museo de Antioquia, antiguo Palacio Municipal, es un museo situado en el centro de Medellín que alberga colecciones con relevancia internacional.</p>
+
+
+        <p class="info-general-2" id="parrafo-2"> Fue el primero fundado en el departamento de Antioquia y el segundo en Colombia. Se sitúa frente a la plaza Botero, cerca de la estación de metro Parque Berrío.</p>
+
+
+        <p class="info-3">Se encuentra en un lugar muy colonial y centrado, cerca de diferentes rutas como buses públicos y el Metro de Medellín; además, está situado en un lugar muy transitado, cerca de hoteles, restaurantes y centros comerciales para realizar cualquier tipo de compras.</p>
+    </div>
+  </div>
+</div>
+    <!--HACER COMENTARIOS-->
+
+<div class="content comentarios-total">
+  <h4 class="fw-bold">Comentarios</h4>
+  <ul>
+    <li *ngFor="let comentario of comentarios">{{comentario}}</li>
+  </ul>
+    <textarea class="cuadro-comentarios" [(ngModel)]="nuevoComentario" placeholder="Ingresa un comentario">
+    </textarea>
+
+<div class="botoncoment">
+  <button (click)="agregarComentario()" class="boton-comentarios">Enviar</button>
+</div>
+</div>
+
+<!--DAR CLICK EN UNA DE LOS OPCIONES-->
+  <div class="contenedor mt-4">
+    <div class="row opcion-principal">
+      <div class=" opciones text-center fw-bold ">
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion1')" [checked]="opcionSeleccionada === 'opcion1'"> Ver Mapa
+        </label>
+
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion2')" [checked]="opcionSeleccionada === 'opcion2'"> Restaurantes cercanos
+        </label>
+
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion3')" [checked]="opcionSeleccionada === 'opcion3'"> Hoteles cercanos
+        </label>
+
+        <label>
+          <input type="radio" name="opcion" (change)="seleccionarOpcion('opcion4')" [checked]="opcionSeleccionada === 'opcion4'"> Imagenes
+        </label>
+      </div>
+
+    <!--OPCION 1 MAPA-->
+      <div class="principal text-cente">
+        <div *ngIf="opcionSeleccionada === 'opcion1'" class="info ">
+  <!-- Contenido para agregar la ruta del Mapa-->
+          <div class="mapa ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.542871532616!2d-74.04557757142916!3d4.614465614066625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99e36643a3e9%3A0x8068b39be66a650c!2sCerro%20Monserrate!5e0!3m2!1ses-419!2sco!4v1700754346631!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+<!--OPCION 2 RESTAURANTES-->
+        <div *ngIf="opcionSeleccionada === 'opcion2'" class="info">
+  <!-- Contenido para la Opción 2 -->
+          <div class="container">
+            <div class="row ">
+             <div class="contenedor restaurante-1 mt-4">
+              <img src="./assets/imagenes/cerro-monserrate/resta-moserrate-1.jpg" width="110px" alt="">
+                <div class="nombre-restaurante">
+                  <h6 class="fw-bold" style="color: royalblue;">Monserrate Parrilla</h6>
+                    <p class="direccion small">Carrera 2 Este #21-48</p>
+                    <p class="tipo-comida small">Nacional, Parrilla</p>
+                </div>
+              </div>
+
+              <div class="contenedor restaurante-1 mt-4">
+                <img src="./assets/imagenes/cerro-monserrate/resta-moserrate-2.jpg" width="110px" alt="">
+                  <div class="nombre-restaurante">
+                    <h6 class="fw-bold" style="color: royalblue;">Comida Tipica Monserrate</h6>
+                      <p class="direccion small">Bogotá</p>
+                      <p  class="tipo-comida small">Tipica</p>
+                  </div>
+                 </div>
+
+                <div class="contenedor restaurante-1 mt-4">
+                  <img src="./assets/imagenes/cerro-monserrate/resta-moserrate-3.jpg" width="110px" alt="">
+                   <div class="nombre-restaurante">
+                      <h6 class="fw-bold" style="color: royalblue;">Restaurante Buena vista</h6>
+                        <p class="direccion small">Bogotá</p>
+                        <p class="tipo-comida small">Nacionall</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+<!--OPCION 3 HOTELES-->
+        <div *ngIf="opcionSeleccionada === 'opcion3'" class="info ">
+  <!-- Contenido para la Opción 3 -->
+          <div class="container">
+            <div class="row ">
+              <div class="contenedor restaurante-1 mt-4">
+                <img src="./assets/imagenes/cerro-monserrate/hotel-monserrate-1.jpg" width="110px" alt="">
+                  <div class="nombre-restaurante">
+                    <h6 class="fw-bold" style="color: royalblue;">Hotel Casa Deco</h6>
+                      <p class="direccion small">Calle 12c-16 </p>
+                  </div>
+              </div>
+
+      <div class="contenedor restaurante-1 mt-4">
+        <img src="./assets/imagenes/cerro-monserrate/hotel-monserrate-2.jpg" width="110px" alt="">
+          <div class="nombre-restaurante">
+            <h6 class="fw-bold" style="color: royalblue;">Hotel Grand Park</h6>
+              <p class="direccion small">Carrera 5 # 23-34</p>
+        </div>
+       </div>
+
+        <div class="contenedor restaurante-1 mt-4">
+          <img src="./assets/imagenes/cerro-monserrate/hotel-monserrate-3.jpg" width="110px" alt="">
+            <div class="nombre-restaurante">
+              <h6 class="fw-bold" style="color: royalblue;">Hotel Nutibara</h6>
+                <p class="direccion small">Calle 52a #50-46</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--OPCION 4 IMAGENES GENERALES DEL LUGAR-->
+        <div *ngIf="opcionSeleccionada === 'opcion4'" class="info fw-bold">
+  <!-- Contenido para galeria de imagenes-->
+          <div class=" container photo-gallery">
+            <div class="row">
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-1.jpg" class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-2.jpg" class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-3.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-4.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+             <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-5.jpg" class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-6.jpg"class="img-thumbnail"  alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-7.jpg" class="img-thumbnail" alt="">
+            </div>
+
+            <div class="img">
+              <img src="./assets/imagenes/cerro-monserrate/foto-galeria-monserrate-9.jpg"class="img-thumbnail"  alt="">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
